@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try for prectice</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container m-auto">
+        <div class="row">
+            <div class="col">
+                <form action="" onsubmit="myfun()">
+                    
+                    price :- <input type="tel" name="" id="price" placeholder="price"> <br>
+                    customer type :- <input type="text" name="" id="ctype" placeholder="ctype"><br>
+                     <!--  -->
+                    <input type="submit">
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
+    <script>
+
+            function final_price(price,dis){
+
+            return final_price=dis/100*price;
+            }
+      
+            
+            
+            function myfun(){
+
+                var ans =0;
+                    var price =document.getElementById("price").value;
+                        var ctype =document.getElementById("ctype").value;
+                                   
+                                            
+                    if(price<=9999  ){
+                        
+                        dis = 0;
+                        final_price(price,dis);
+                    
+                        ans =document.writeln(`your original price is ${price} after appling discount you will pay ${price-final_price}`);
+                    
+                        // ans =alert("your original price is `$price` after appling discount you will pay `$final_price` ");
+                    }
+                    else if(price>=9999 && price<24999 ){
+                        
+                        dis = 10;
+                        final_price(price,dis);
+                        // ans =alert("your original price is `$price` after appling discount you will pay`$final_price`");
+                    
+                        ans =document.writeln(`your original price is ${price} after appling discount you will pay ${price-final_price}`);
+                    }
+                    
+                    else if(price>=25000 && price<49999 ){
+                        
+                        dis = 15;
+                        final_price(price,dis);
+                        // ans =alert("your original price is `$price` after appling discount you will pay`$final_price`");
+                    
+                        ans =document.writeln(`your original price is ${price} after appling discount you will pay ${price-final_price}`);
+                    }
+                    
+                    else if(price>=50000  && ctype =="independent"){
+                        
+                        dis = 17.5;
+                        final_price(price,dis);
+                        // ans =alert("your original price is `$price` after appling discount you will pay`$final_price`");
+                    
+                        ans =document.writeln(`your original price is ${price} after appling discount you will pay ${price-final_price}`);
+                    
+                    }
+                    
+                    else if(price>=50000  && ctype =="comercial"){
+                        
+                        dis = 30;
+                        final_price(price,dis);
+                        // ans =alert("your original price is `$price` after appling discount you will pay`$final_price`");
+                        ans =document.writeln(`your original price is ${price} after appling discount you will pay ${price-final_price}`);
+                    }
+                    
+                    
+                    //document.write(+"<br><br>"+final_price);
+                    // document.getElementById("myid").innerHTML=ans;
+
+// document.getElementById("myid").innerHTML = ans;
+}
+
+        
+            </script>
+
+
+<script>
+    function get_input(){
+        
+        var str;
+        var str1;
+        
+       
+            elm = document.getElementById('price');
+            if(elm !=null){
+                str=elm.value;
+                document.writeln(str);
+            }
+            else{
+                str =null;
+            }
+
+
+            var str1;
+            elm1 = document.getElementById('ctype');
+            if(elm1 !=null){
+                str1=elm1.value;
+                document.writeln(str1);
+            }
+            else{
+                str1 =null;
+            }
+}
+    </script>
+
+    <script src="myscript.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
